@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:banat_spaces/screens/mapscreen.dart';
+import 'package:banat_spaces/screens/myaccount.dart';
+import 'package:banat_spaces/screens/today.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -57,9 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Center(child: Text('Today', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Map', style: TextStyle(fontSize: 24))),
-    Center(child: Text('My Account', style: TextStyle(fontSize: 24))),
+    TodayScreen(),
+    MapScreen(),
+    AccountScreen(),
   ];
 
   void _onItemTapped(int index) {
